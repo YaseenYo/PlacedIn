@@ -1,0 +1,18 @@
+.menucontainer {
+    border : solid #3674c1;
+    border-top : none;
+    border-radius : 4px;
+    margin-left: 15rem;
+    margin-top: 40px;
+}
+
+.mainmenu {
+    background : #3674c1 !important;
+    margin:0 !important;
+}
+
+@media screen and (max-width : 560px) {
+    .menucontainer {
+        margin-left: 0;
+    }
+}

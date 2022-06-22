@@ -1,0 +1,36 @@
+#collapse {
+    display: none;
+}
+
+.ui.secondary.pointing.menu {
+    border-bottom: 0px;
+}
+
+.right.menu {
+    padding-right : 16px;
+}
+
+.ui.secondary.menu {
+    box-shadow: rgba(168, 167, 167, 0.12) 0px 1px 4px;
+}
+
+.profile_img {
+    margin: auto;
+    width: 37px;
+    height: 37px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width : 560px){
+    #collapse{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 600px)
+{
+    #navbar{
+        min-height: 55px;
+    }    
+
+}

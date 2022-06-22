@@ -1,0 +1,14 @@
+.ui.card{
+    width: 100% !important;
+    padding: 10px;
+}
+
+.user_profile{
+    width: 37px;
+    height: 37px;
+}
+
+.ui.form {
+    margin-left: 10px;
+    width: 100%;
+}

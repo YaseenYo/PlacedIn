@@ -1,0 +1,29 @@
+#mysidebar {
+    background: #f1f6f7 !important;
+    padding-top: 10px !important;
+    margin-top: 40px !important;
+}
+
+.terminator {
+    display: none !important;
+}
+
+.divider {
+    display: none;
+}
+
+@media screen and (max-width : 560px){
+    #mysidebar {
+        z-index: 2000 !important;
+        margin: 0 !important;
+    }
+
+    .terminator {
+        color: #3674c1 !important;
+        display: block !important;
+    }
+
+    .divider {
+        display: block;
+    }
+}
