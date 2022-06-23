@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import SidebarItem from './SidebarItem';
-import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import "./sidebar.css";
 
@@ -40,15 +39,15 @@ const Sidebar = ({onClose,visibility,displaySetting}) => {
                 <i className =  {`angle ${dropdownIcon} icon`}></i>
                 Company Drives
             </div>
-            {dropdown ? <Link to = "createdrive" className ="item" style = {{...style,paddingLeft:"40px",paddingRight:"20px"}}>
+            {dropdown ? <Link to = "/createdrive" className ="item" style = {{...style,paddingLeft:"40px",paddingRight:"20px"}}>
                 <i className =  "add icon"></i>
                 Create Drive
             </Link> : null}
-            {dropdown ? <Link to = "activedrives" className ="item" style = {{...style,paddingLeft:"40px",paddingRight:"20px"}}>
+            {dropdown ? <Link to = "/activedrives" className ="item" style = {{...style,paddingLeft:"40px",paddingRight:"20px"}}>
                 <i className =  "angellist icon"></i>
                 Active Drives
             </Link> : null}
-            {dropdown ? <Link to = "previousdrives" className ="item" style = {{...style,paddingLeft:"40px",paddingRight:"20px"}}>
+            {dropdown ? <Link to = "/previousdrives" className ="item" style = {{...style,paddingLeft:"40px",paddingRight:"20px"}}>
                 <i className =  "history icon"></i>
                 Previous Drives
             </Link> : null}

@@ -1,7 +1,6 @@
 import React,{ useState } from 'react';
 import Sidebar from './Sidebar';
 import Navbar from './Navbar';
-import MenuContainer from './MenuContainer';
 
 const SidebarNavbarCombo = () => {
     const [visible,setVisible] = useState(false);
