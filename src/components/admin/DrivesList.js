@@ -1,48 +1,28 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import DriveCard from './DriveCard'
+import api from "../../api/adminAPI";
 
 export default function DrivesList() {
+    const [drives, setDrives] = useState([]);
+    let list = [];
+
+    useEffect(() =>{
+        api.get("companydrives").then((response) => {
+            if(list.length == 0){
+                response.data.map((x) => { 
+                    list.push(x);
+                });
+                setDrives(list);
+            }
+        });
+    },[]);
+
     return (
         <div className="ui cards">
-            <div className="card">
-                <div className="content">
-                <i className='right floated large graduation icon'></i>
-                <div className="header">
-                    TCS Digital - 7.7LPA
-                </div>
-                <div className="meta">
-                    Development
-                </div>
-                <div className="description">
-                    Elliot requested permission to view your contact details
-                </div>
-                </div>
-                <div className="extra content">
-                <div className="ui two buttons">
-                    <div className="ui basic green button">Edit Drive</div>
-                    <div className="ui basic red button">End Drive</div>
-                </div>
-                </div>
-            </div>
-            <div className="card">
-                <div className="content">
-                <i className='right floated large graduation icon'></i>
-                <div className="header">
-                    Accenture - 4.5LPA
-                </div>
-                <div className="meta">
-                    Internship
-                </div>
-                <div className="description">
-                    Jenny wants to add you to the group <b>best friends</b>
-                </div>
-                </div>
-                <div className="extra content">
-                <div className="ui two buttons">
-                    <div className="ui basic green button">Edit Drive</div>
-                    <div className="ui basic red button">End Drive</div>
-                </div>
-                </div>
-            </div>
+            {drives.map((d)=>{
+                return (<DriveCard key = {d.id} id = {d.id} compName = {d.companyName} pack = {d.package} role = {d.role} 
+                    eligibility = {d.eligibility} lastDate = {d.lastDateToApply} />)
+            })}
         </div>
     )
 }

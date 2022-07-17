@@ -16,6 +16,7 @@ import TimelineView from "./admin/TimelineView";
 import StudentHomeView from "./student/StudentHomeView";
 import StudentProfileView from "./student/StudentProfileView";
 import CreateTimeLineView from "./admin/CreateTimeLineView";
+import EditDriveView from "./admin/EditDriveView";
 
 const App = () => {
     return(
@@ -29,6 +30,7 @@ const App = () => {
                 <Route path = "/stats" exact element = {<StatsView/>}/>
                 <Route path = "/timeline" exact element = {<TimelineView/>}/>
                 <Route path = "/createdrive" exact element = {<CreateDriveView/>}/>
+                <Route path = "/editdrive" exact element = {<EditDriveView/>}/>
                 <Route path = "/activedrives" exact element = {<ActiveDrivesView/>}/>
             </Routes>
         </BrowserRouter>
