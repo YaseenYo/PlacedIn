@@ -15,19 +15,21 @@ import PreviousDrivesView from "./admin/PreviousDrivesView";
 import TimelineView from "./admin/TimelineView";
 import StudentHomeView from "./student/StudentHomeView";
 import StudentProfileView from "./student/StudentProfileView";
+import CreateTimeLineView from "./admin/CreateTimeLineView";
 
 const App = () => {
     return(
         <BrowserRouter history = {history}>
             <Routes>
-                <Route path = "/home" exact element = {<StudentHomeView/>}/>
-                <Route path = "/profile" exact element = {<StudentProfileView/>}/>
+                <Route path = "/home" exact element = {<HomeView/>}/>
+                <Route path = "/profile" exact element = {<ProfileView/>}/>
+                <Route path = "/createTimeLine" exact element = {<CreateTimeLineView/>}/>
+                <Route path = "/students" exact element = {<StudentView/>}/>
                 <Route path = "/messages" exact element = {<MessageView/>}/>
-                <Route path = "/companies" exact element = {<StatsView/>}/>
+                <Route path = "/stats" exact element = {<StatsView/>}/>
                 <Route path = "/timeline" exact element = {<TimelineView/>}/>
-                <Route path = "/seniors" exact element = {<StudentView/>}/>
+                <Route path = "/createdrive" exact element = {<CreateDriveView/>}/>
                 <Route path = "/activedrives" exact element = {<ActiveDrivesView/>}/>
-                <Route path = "/previousdrives" exact element = {<PreviousDrivesView/>}/>
             </Routes>
         </BrowserRouter>
     );
@@ -53,11 +55,11 @@ export default App;
 //Student
 
 {/* <Route path = "/home" exact element = {<StudentHomeView/>}/>
-<Route path = "/profile" exact element = {<StudentProfileView/>}/>
-<Route path = "/students" exact element = {<StudentView/>}/>
-<Route path = "/messages" exact element = {<MessageView/>}/>
-<Route path = "/stats" exact element = {<StatsView/>}/>
-<Route path = "/timeline" exact element = {<TimelineView/>}/>
-<Route path = "/activedrives" exact element = {<ActiveDrivesView/>}/>
-<Route path = "/previousdrives" exact element = {<PreviousDrivesView/>}/> */}
+                <Route path = "/profile" exact element = {<StudentProfileView/>}/>
+                <Route path = "/messages" exact element = {<MessageView/>}/>
+                <Route path = "/companies" exact element = {<StatsView/>}/>
+                <Route path = "/timeline" exact element = {<TimelineView/>}/>
+                <Route path = "/seniors" exact element = {<StudentView/>}/>
+                <Route path = "/activedrives" exact element = {<ActiveDrivesView/>}/>
+                <Route path = "/previousdrives" exact element = {<PreviousDrivesView/>}/> */}
 

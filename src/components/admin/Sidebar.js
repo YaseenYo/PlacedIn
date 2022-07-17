@@ -10,7 +10,6 @@ const navData = [
     {label : "Home", target : "/home", iconName : "home"},
     {label : "Profile", target : "/profile", iconName : "user plus"},
     {label : "Students", target : "/students", iconName : "users"},
-    {label : "Messages", target : "/messages", iconName : "inbox"},
     {label : "Stats", target : "/stats", iconName : "pie chart"},
     {label : "Timeline", target : "/timeline", iconName : "calendar check outline"},
 ];
@@ -46,10 +45,6 @@ const Sidebar = ({onClose,visibility,displaySetting}) => {
             {dropdown ? <Link to = "/activedrives" className ="item" style = {{...style,paddingLeft:"40px",paddingRight:"20px"}}>
                 <i className =  "angellist icon"></i>
                 Active Drives
-            </Link> : null}
-            {dropdown ? <Link to = "/previousdrives" className ="item" style = {{...style,paddingLeft:"40px",paddingRight:"20px"}}>
-                <i className =  "history icon"></i>
-                Previous Drives
             </Link> : null}
         </div>
     );

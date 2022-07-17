@@ -10,9 +10,10 @@ const Navbar = ({onBurglerClick,visibility}) => {
             <div className = "item" id = "collapse">
                 <i className = "bars icon" onClick = {() => onBurglerClick(!visibility)} ></i>
             </div>
+            <h1 className = "header" style={{marginTop:"auto", marginBottom: "auto", marginLeft : "280px",fontFamily:"Brush Script MT"}}>
+                PlacedIn
+            </h1>
             <div className='right menu'>
-                <i className = "search icon" style={{margin:"auto",color : "#6b7280"}}></i>
-                <i className = "bell icon" style={{margin:"auto",marginLeft : "10px",color : "#6b7280"}}></i>
                 <img src="monica.png" className="ui avatar image profile_img"/>
             </div>
         </div>
