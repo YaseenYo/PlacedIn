@@ -1,17 +1,16 @@
 import React from 'react'
 
-export default function StudentsTable({title}) {
+export default function StudentsTable({title,showSearch}) {
     return (
         <div className='ui card' style={{padding:"20px"}}>
             <div className='m-3 mb-3'>
                 <span style={{fontSize : "25px",fontWeight : "600"}}>{title}</span>
-                <div className="ui right floated search">
+                { showSearch ? <div className="ui right floated search">
                     <div className="small ui icon input mr-3">
-                        <input className="prompt" type="text" placeholder="Common passwords..."/>
+                        <input className="prompt" type="text" placeholder="search..."/>
                         <i className="search icon"></i>
                     </div>
-                    <button className='small ui blue button'>Export</button>
-                </div>
+                </div> : null}
             </div>
             <table className="ui celled table">
                 <thead className="full-width">
@@ -30,7 +29,7 @@ export default function StudentsTable({title}) {
                     <tr>
                         <td>
                             <h4 className="ui image header">
-                                <img src="monica.png" className="ui mini rounded image"/>
+                                <img src="khalida.png" className="ui mini rounded image"/>
                                 <div className="content">
                                     Monica
                                     <div className="sub header">1DA18CS086</div>
@@ -48,7 +47,7 @@ export default function StudentsTable({title}) {
                     <tr>
                         <td>
                             <h4 className="ui image header">
-                                <img src="sakhib.png" className="ui mini rounded image"/>
+                                <img src="rumu.png" className="ui mini rounded image"/>
                                 <div className="content">
                                     Khaleel
                                     <div className="sub header">1DA18CS087</div>
@@ -66,7 +65,7 @@ export default function StudentsTable({title}) {
                     <tr>
                         <td>
                             <h4 className="ui image header">
-                                <img src="rihana.png" className="ui mini rounded image"/>
+                                <img src="saba.png" className="ui mini rounded image"/>
                                 <div className="content">
                                     Rihana
                                     <div className="sub header">1DA18CS088</div>
@@ -84,9 +83,9 @@ export default function StudentsTable({title}) {
                     <tr>
                         <td>
                             <h4 className="ui image header">
-                                <img src="monica.png" className="ui mini rounded image"/>
+                                <img src="salman.png" className="ui mini rounded image"/>
                                 <div className="content">
-                                    Lena
+                                    Salman
                                     <div className="sub header">1DA18CS089</div>
                                 </div>
                             </h4>
@@ -102,7 +101,7 @@ export default function StudentsTable({title}) {
                     <tr>
                         <td>
                             <h4 className="ui image header">
-                                <img src="sakhib.png" className="ui mini rounded image"/>
+                                <img src="rohit.png" className="ui mini rounded image"/>
                                 <div className="content">
                                     Sakhib
                                     <div className="sub header">1DA18CS090</div>

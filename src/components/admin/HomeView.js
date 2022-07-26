@@ -27,7 +27,11 @@ function HomeView() {
                 <YourPost/>
                 <h2 style={{marginTop:"40px"}}>Here's what your connections posted</h2>
                 {posts.map((p)=>{
-                    return (<Post name = {p.userName} usrImg = {p.usrImg} date = {p.postTime} likes = {p.likes} content = {p.content}  key = {p.id}/>);
+                    let pname = p.userName;
+                    if(pname === "Admin"){
+                        pname = "My Post";
+                    }
+                    return (<Post name = {pname} usrImg = {p.usrImg} date = {p.postTime} likes = {p.likes} content = {p.content}  key = {p.id}/>);
                 })}
             </MenuContainer>
         </div>

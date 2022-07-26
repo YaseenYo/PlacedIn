@@ -13,7 +13,7 @@ export default function ProfileCard() {
         api.get("Posts").then((response) => {
             if(list.length == 0){
                 response.data.map((x) => { 
-                    if(x.userName === "My Post"){
+                    if(x.userName === "Admin"){
                         list.push(x);
                     }
                 });
@@ -52,7 +52,7 @@ export default function ProfileCard() {
                         <div className="py-4 px-3">
                             <h3>Recent posts</h3>
                             {posts.map((p)=>{
-                                return (<Post name = {p.userName} usrImg = {p.usrImg} date = {p.postTime} likes = {p.likes} content = {p.content}  key = {p.id}/>);
+                                return (<Post name = "My Post" usrImg = {p.usrImg} date = {p.postTime} likes = {p.likes} content = {p.content}  key = {p.id}/>);
                             })}
                         </div>
                     </div>

@@ -1,0 +1,10 @@
+#createCard {
+    width: 600px !important;
+    margin: 50px auto;
+}
+
+#logo {
+    font-family: "Brush Script MT";
+    text-align: center;
+    margin-top: 20px;
+}

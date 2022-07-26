@@ -7,12 +7,11 @@ import "./sidebar.css";
 const style = {color:"rgb(209 213 219)",padding : "20px"};
 
 const navData = [
-    {label : "Home", target : "/home", iconName : "home"},
-    {label : "Profile", target : "/profile", iconName : "user plus"},
-    {label : "Messages", target : "/messages", iconName : "inbox"},
-    {label : "Companies", target : "/companies", iconName : "pie chart"},
+    {label : "Home", target : "/studenthome", iconName : "home"},
+    {label : "Profile", target : "/studentprofile", iconName : "user plus"},
+    {label : "Stats", target : "/stats", iconName : "pie chart"},
     {label : "Seniors", target : "/seniors", iconName : "user circle"},
-    {label : "Timeline", target : "/timeline", iconName : "calendar check outline"},
+    {label : "Timeline", target : "/studenttimeline", iconName : "calendar check outline"},
 ];
 
 const StudentSidebar = ({onClose,visibility,displaySetting}) => {
@@ -24,6 +23,8 @@ const StudentSidebar = ({onClose,visibility,displaySetting}) => {
         );
     });
 
+    const name = sessionStorage.getItem("studentName");
+
     const dropdownIcon = dropdown ? "down" : "right";
 
     return (
@@ -33,21 +34,25 @@ const StudentSidebar = ({onClose,visibility,displaySetting}) => {
             </div>
             <h4 style= {{textAlign : "center", padding : '20px',color:"rgb(209 213 219)",fontSize : "20px"}}>
                 <i aria-hidden="true" className ="user fitted icon"></i>  
-                <p>Mohammed Muzammil</p>
+                <p>{name}</p>
             </h4>
             {renderedNavItems}
             <div className ="item" onClick={()=>setDropdown(!dropdown)} style = {{...style,cursor:"pointer"}}>
                 <i className =  {`angle ${dropdownIcon} icon`}></i>
                 Company Drives
             </div>
-            {dropdown ? <Link to = "/activedrives" className ="item" style = {{...style,paddingLeft:"40px",paddingRight:"20px"}}>
+            {dropdown ? <Link to = "/studentactivedrives" className ="item" style = {{...style,paddingLeft:"40px",paddingRight:"20px"}}>
                 <i className =  "angellist icon"></i>
                 Active Drives
             </Link> : null}
-            {dropdown ? <Link to = "/previousdrives" className ="item" style = {{...style,paddingLeft:"40px",paddingRight:"20px"}}>
-                <i className =  "history icon"></i>
-                Previous Drives
+            {dropdown ? <Link to = "/applieddrives" className ="item" style = {{...style,paddingLeft:"40px",paddingRight:"20px"}}>
+                <i className =  "check icon"></i>
+                Applied Drives
             </Link> : null}
+            <Link to = "/login" className ="item" style = {{...style,cursor:"pointer"}}>
+                <i className =  "logout icon"></i>
+                Logout
+            </Link>
         </div>
     );
 };

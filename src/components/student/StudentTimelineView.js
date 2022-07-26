@@ -1,13 +1,14 @@
 import React from 'react'
 import MenuContainer from './MenuContainer'
 import SidebarNavbarCombo from './SidebarNavbarCombo'
+import Timeline from './Timeline'
 
-export default function PreviousDrivesView() {
+export default function StudentTimelineView() {
     return (
         <div>
             <SidebarNavbarCombo/>
             <MenuContainer>
-                <h2 className='mb-5'>Previous Drives</h2>
+                <Timeline/>
             </MenuContainer>
         </div>
     )

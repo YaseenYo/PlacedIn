@@ -8,7 +8,7 @@ export default function YourPost() {
     const handleSubmit = async () => {
         const currentdate = new Date();
         const myPost = {
-            "userName": "My Post",
+            "userName": "Admin",
             "usrImg": "monica.png",
             "postTime" : String(currentdate.getDate() + "/"
             + (currentdate.getMonth()+1)  + "/" 

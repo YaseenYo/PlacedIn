@@ -26,10 +26,11 @@ export default function Timeline() {
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <div className="card">
+                    <div className="ui card">
                         <div className="card-body">
                         <div className='ml-3' style={{marginBottom : "70px"}}>
-                            <button onClick={() => { window.location.href = "createTimeLine" } } className='right floated ui button primary mr-3'>Add timeline</button>
+                            <button onClick={() => { window.location.href = "createTimeLine" } } 
+                                className='right floated ui button primary mr-3'>Add timeline</button>
                             <h4 className="card-title">Timeline</h4>
                             <p className="card-description">Company Drives Timeline</p>
                         </div>

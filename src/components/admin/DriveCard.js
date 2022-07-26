@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import api from "../../api/adminAPI";
 
 
 export default function DriveCard({compName,pack,role,eligibility,lastDate,id}) {
@@ -7,8 +8,16 @@ export default function DriveCard({compName,pack,role,eligibility,lastDate,id}) 
         window.location.href = "editdrive";
     }
 
-    const handleDelete = (e) => {
-
+    const handleDelete = async (e) => {
+        const url = "companydrives/" + id;
+        try {
+            await api.delete(url);
+            window.location.reload();
+        } catch (error) {
+            console.log(error);
+            alert("Deletion Unsuccessfull...");
+        }
+        
     }
 
     return (

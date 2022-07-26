@@ -26,8 +26,8 @@ export default function StatsContent() {
                 </div>
             </div>
             <StudentsChartCard/>
-            <StudentsTable title= "Selected Students"/>
-            <StudentsTable title = "Unselected Students"/> 
+            <StudentsTable title= "Selected Students" showSearch = {false}/>
+            <StudentsTable title = "Unselected Students" showSearch = {false}/> 
         </div>
     )
 }
